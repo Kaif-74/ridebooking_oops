@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 class RideService:
     def __init__(self, name, rates):
         self.name = name
-        self.rates = rates   # per km rates
+        self.rates = rates   
 
     def show_rates(self):
         print(f"--- {self.name} Ride Rates ---")
@@ -12,7 +12,6 @@ class RideService:
             print(f"{vehicle} : ₹{rate}/km")
 
 
-# 💳 Payment System
 class Payment(ABC):
     @abstractmethod
     def pay(self, amount):
@@ -70,7 +69,6 @@ class Ride:
         print(f"Total Fare: ₹{self.calculate_fare()}")
 
 
-# 🚀 Main Program
 def main():
     print("🚗 Welcome to Ride Booking App")
 
